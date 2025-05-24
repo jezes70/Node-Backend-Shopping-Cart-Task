@@ -181,4 +181,5 @@ MIT - feel free to reuse this architecture for other event-driven systems!!
 
 ---
 
-Thank you Breet App for this great opportunity to build this project.
+Thank you Inbreetic Technologies
+ for this great opportunity to build this project.
