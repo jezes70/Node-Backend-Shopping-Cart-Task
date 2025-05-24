@@ -175,14 +175,6 @@ createdAt: Date
 
 ---
 
-## 📌 TODO
-
-* Add validation middleware (e.g. `express-validator`)
-* Swagger API Documentation
-* Email notifications on checkout
-
----
-
 ## 📄 License
 
 MIT - feel free to reuse this architecture for other event-driven systems!!
