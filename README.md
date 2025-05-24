@@ -186,3 +186,7 @@ createdAt: Date
 ## 📄 License
 
 MIT - feel free to reuse this architecture for other event-driven systems!!
+
+---
+
+Thank you Breet App for this great opportunity to build this project.
