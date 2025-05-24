@@ -5,20 +5,26 @@ A scalable and secure e-commerce backend built using Node.js, Express, MongoDB, 
 ## 🏗️ Architecture Overview
 
 ```
-+-----------+        HTTP        +------------+     Redis Lock     +------------+
-|  Frontend |  +---------------> |  Backend   | +----------------> |   Redis    |
-|  (React)  |                   | (Express)  |                   |  (PX/NX)   |
-+-----------+                  /+------------+\                  +------------+
-   ↑                          /      ↑        \
-   |                         /       |         \
-   |                        /        |          \  MongoDB Ops
-   |                       /         |           +----------------+
-   |                      /          |                            |
-   |    REST/JWT Auth     |   Checkout Controller                 |
-   +----------------------+            +-------------------------->
-                                       |     MongoDB             |
-                                       |  (Users, Cart, Orders)  |
-                                       +--------------------------+
+                   HTTP
+               +----------+
+               | Backend  |
+               | (Express)|
+               +----------+
+                    |
+         +---------------------------+
+         |      JWT Authentication   |
+         +---------------------------+
+                    |
+         +---------------------------+
+         |   Checkout Controller     |
+         +---------------------------+
+            /                   \
+     Redis Lock PX/NX        MongoDB Ops
+        +---------+       +------------------+
+        |  Redis  |       |     MongoDB      |
+        |  (Lock) |       | (Users, Orders,  |
+        +---------+       |  Products, Cart) |
+                          +------------------+
 ```
 
 ---
