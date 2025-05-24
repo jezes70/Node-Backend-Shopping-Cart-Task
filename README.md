@@ -179,4 +179,4 @@ createdAt: Date
 
 ## 📄 License
 
-MIT
+MIT - feel free to reuse this architecture for other event-driven systems!!
